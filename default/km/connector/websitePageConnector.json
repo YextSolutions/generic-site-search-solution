@@ -1,0 +1,96 @@
+{
+  "$id": "websitePageConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "displayName": "Website Page Connector",
+  "entityType": "ce_page",
+  "source": {
+    "sourceConfig": {
+      "crawlerConfig": {
+        "crawler": "websitecrawler",
+        "urlPatterns": []
+      }
+    },
+    "selectors": [
+      {
+        "type": "PAGE_ID",
+        "header": "Page ID"
+      },
+      {
+        "type": "PAGE_URL",
+        "header": "Page URL"
+      },
+      {
+        "type": "PAGE_TITLE",
+        "header": "Page Title"
+      },
+      {
+        "type": "CLEANED_BODY",
+        "header": "Body"
+      },
+      {
+        "type": "CSS",
+        "header": "H1",
+        "path": "h1",
+        "mode": "ALL_TEXT"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "filterRows": {
+        "action": "REMOVE",
+        "combinator": "OR",
+        "rules": [
+          {
+            "columnHeader": "Page URL",
+            "conditional": "CONTAINS",
+            "conditionalInput": "#"
+          },
+          {
+            "columnHeader": "Page URL",
+            "conditional": "CONTAINS",
+            "conditionalInput": "?"
+          }
+        ]
+      }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Domain",
+        "columnValue": "${{domain}}"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Page ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Page URL",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Page Title",
+      "subfieldPath": []
+    },
+    {
+      "field": "body",
+      "header": "Body",
+      "subfieldPath": []
+    },
+    {
+      "field": "c_h1",
+      "header": "H1",
+      "subfieldPath": []
+    },
+    {
+      "field": "c_domain",
+      "header": "Domain",
+      "subfieldPath": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "websitecrawler",
+  "$schema": "https://schema.yext.com/config/crawler/site-crawler/v1",
+  "name": "Website Crawler",
+  "enabled": true,
+  "crawlSchedule": "once",
+  "crawlStrategy": "allPages",
+  "domains": [
+    "${{domain}}"
+  ],
+  "ignoreQueryParameterOption": "all"
+}

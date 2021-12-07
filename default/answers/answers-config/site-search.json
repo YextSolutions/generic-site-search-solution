@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.yext.com/config/answers/answers-config/v1",
+  "$id": "site-search",
+  "name": "Site Search",
+  "supportedLocales": [],
+  "countryRestrictions": [],
+  "verticals": {
+    "pages": {
+      "entityTypes": [
+        "ce_page"
+      ],
+      "name": "Pages",
+      "savedSearchId": "767419259",
+      "searchableFields": {
+        "body": {
+          "documentSearch": true
+        },
+        "builtin.entityType": {
+          "nlpFilter": true
+        },
+        "name": {
+          "semanticTextSearch": true
+        }
+      },
+      "sortBys": [],
+      "source": "KNOWLEDGE_MANAGER"
+    }
+  },
+  "localizations": {},
+  "additionalSearchablePlaces": [],
+  "querySuggestions": {
+    "disablePopularQueries": false,
+    "verticalPromptsOnEmpty": false,
+    "popularQueriesBlacklistedTerms": [],
+    "universalPrompts": [],
+    "verticalPrompts": {
+      "pages": [
+        "[[name]]"
+      ]
+    }
+  }
+}
