@@ -92,5 +92,9 @@
       "header": "Domain",
       "subfieldPath": []
     }
-  ]
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "COMPREHENSIVE"
+  }
 }
