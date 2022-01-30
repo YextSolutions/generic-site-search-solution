@@ -6,7 +6,7 @@
   "crawlSchedule": "once",
   "crawlStrategy": "allPages",
   "domains": [
-    "${{domain}}"
+    "${{siteSearchWebsite}}"
   ],
   "ignoreQueryParameterOption": "all"
 }
