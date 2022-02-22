@@ -44,6 +44,15 @@
       ]
     },
     {
+      "displayName": "CTAs",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "c_primaryCTA"
+        }
+      ]
+    },
+    {
       "displayName": "Other",
       "entryType": "DIVIDER"
     },

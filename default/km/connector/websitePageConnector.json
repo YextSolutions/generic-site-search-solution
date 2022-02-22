@@ -32,6 +32,10 @@
         "header": "H1",
         "path": "h1",
         "mode": "ALL_TEXT"
+      },
+      {
+        "type": "PAGE_URL",
+        "header": "Page URL - CTA"
       }
     ]
   },
@@ -58,6 +62,12 @@
       "addColumn": {
         "newColumnHeader": "Domain",
         "columnValue": "${{siteSearchWebsite}}"
+      }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Primary CTA - Label",
+        "columnValue": "View Page"
       }
     }
   ],
@@ -91,6 +101,24 @@
       "field": "c_domain",
       "header": "Domain",
       "subfieldPath": []
+    },
+    {
+      "field": "c_primaryCTA",
+      "header": "Page URL - CTA",
+      "subfieldPath": [
+        {
+          "name": "link"
+        }
+      ]
+    },
+    {
+      "field": "c_primaryCTA",
+      "header": "Primary CTA - Label",
+      "subfieldPath": [
+        {
+          "name": "label"
+        }
+      ]
     }
   ],
   "scheduleConfig": {
