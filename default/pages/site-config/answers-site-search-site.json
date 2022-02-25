@@ -4,7 +4,7 @@
   "siteName": "Site Search",
   "repoConfig": {
     "targetRepoName": "generic-site-search-template-${{businessId}}",
-    "templateRepo": "https://github.com/YextSolutions/generic-site-search-solution"
+    "templateRepo": "https://github.com/yext-pages/answers-template-generic-site-search"
   },
   "domain": "searchembed.pagescdn.com",
   "publishingConfig": {
