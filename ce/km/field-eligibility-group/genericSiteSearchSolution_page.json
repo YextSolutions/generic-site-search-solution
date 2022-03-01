@@ -1,7 +1,7 @@
 {
-  "$id": "ce_page.default",
+  "$id": "genericSiteSearchSolution_ce_page",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
-  "name": "Page-default",
+  "name": "genericSiteSearchSolution_Page-default",
   "entityType": "ce_page",
   "fields": [
     "body",
