@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schema.yext.com/config/km/settings/v1",
+  "entityTypeSettings": [
+    {
+      "entityType": "ce_page",
+      "disabled": false
+    }
+  ]
+}
