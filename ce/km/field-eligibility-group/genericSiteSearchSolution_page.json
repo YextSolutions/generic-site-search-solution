@@ -5,6 +5,7 @@
   "entityType": "ce_page",
   "fields": [
     "body",
+    "bodyV2",
     "landingPageUrl",
     "c_activeOnAnswers",
     "c_domain",

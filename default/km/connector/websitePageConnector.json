@@ -1,13 +1,18 @@
 {
   "$id": "websitePageConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "$schema": "https://schema.yext.com/config/km/connector/v4",
   "displayName": "Website Page Connector",
-  "entityType": "ce_page",
+  "entityTypes": [
+    "ce_page"
+  ],
   "source": {
     "sourceConfig": {
       "crawlerConfig": {
         "crawler": "websitecrawler",
-        "urlPatterns": []
+        "urlPatterns": [],
+        "fileTypes": [
+          "HTML"
+        ]
       }
     },
     "selectors": [
@@ -61,7 +66,7 @@
     {
       "addColumn": {
         "newColumnHeader": "Domain",
-        "columnValue": "${{siteSearchWebsite}}"
+        "columnValue": "https://www.hitchhikers.yext.com"
       }
     },
     {
@@ -73,56 +78,68 @@
   ],
   "mappings": [
     {
-      "field": "entityId",
-      "header": "Page ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "landingPageUrl",
       "header": "Page URL",
-      "subfieldPath": []
+      "field": "landingPageUrl",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
     },
     {
-      "field": "name",
-      "header": "Page Title",
-      "subfieldPath": []
-    },
-    {
-      "field": "body",
-      "header": "Body",
-      "subfieldPath": []
-    },
-    {
-      "field": "c_h1",
-      "header": "H1",
-      "subfieldPath": []
-    },
-    {
-      "field": "c_domain",
-      "header": "Domain",
-      "subfieldPath": []
-    },
-    {
-      "field": "c_primaryCTA",
-      "header": "Page URL - CTA",
-      "subfieldPath": [
-        {
-          "name": "link"
-        }
-      ]
-    },
-    {
-      "field": "c_primaryCTA",
       "header": "Primary CTA - Label",
+      "field": "c_primaryCTA",
       "subfieldPath": [
         {
           "name": "label"
         }
-      ]
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Page URL - CTA",
+      "field": "c_primaryCTA",
+      "subfieldPath": [
+        {
+          "name": "link"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "H1",
+      "field": "c_h1",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Page Title",
+      "field": "name",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Domain",
+      "field": "c_domain",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Body",
+      "field": "bodyV2",
+      "subfieldPath": [
+        {
+          "name": "markdown"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Page ID",
+      "field": "entityId",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
     }
   ],
-  "scheduleConfig": {
-    "useSourceSchedule": true,
-    "runMode": "COMPREHENSIVE"
+  "comprehensiveModeConfig": {
+    "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+    "actionOnMissingEntities": "DELETE"
   }
 }
