@@ -23,15 +23,18 @@
         }
       },
       "sortBys": [],
-      "source": "KNOWLEDGE_MANAGER"
+      "source": "YEXT"
     }
   },
   "localizations": {},
   "additionalSearchablePlaces": [],
+  "richTextV2ToHTML": true,
+  "markdownToHTML": true,
   "querySuggestions": {
     "disablePopularQueries": false,
     "verticalPromptsOnEmpty": false,
     "popularQueriesBlacklistedTerms": [],
+    "popularQueriesBlacklistedRegex": [],
     "universalPrompts": [],
     "verticalPrompts": {
       "pages": [
