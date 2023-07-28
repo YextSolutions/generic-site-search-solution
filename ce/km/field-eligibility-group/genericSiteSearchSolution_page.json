@@ -4,7 +4,6 @@
   "name": "genericSiteSearchSolution_Page-default",
   "entityType": "ce_page",
   "fields": [
-    "body",
     "bodyV2",
     "landingPageUrl",
     "c_activeOnAnswers",
