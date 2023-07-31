@@ -12,7 +12,7 @@
       "name": "Pages",
       "savedSearchId": "767419259",
       "searchableFields": {
-        "body": {
+        "bodyV2": {
           "documentSearch": true
         },
         "builtin.entityType": {
